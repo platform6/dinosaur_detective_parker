@@ -66,4 +66,6 @@ Without MCP, use `[InitializeOnLoad]` one-shots that run once Unity has focus, a
 
 - After a scripted text edit (PowerShell `.Replace`, sed), grep to confirm it applied; one silently failed before. Prefer a direct file edit.
 - The camera (offset (0, 4.5, −9), pitch 20°, FOV 40) only sees the backdrop up to about y = 4.5. Put any sky detail in that band.
-- There's no git repository yet. Be careful with destructive edits to scenes and assets.
+- **Git:** the project is a git repo on `main`, with binary art in Git LFS (see `.gitattributes`).
+  - Always commit `.meta` files together with their assets.
+  - Never commit `Library/`, `Temp/`, `Logs/`, `UserSettings/` or the generated `.csproj`/`.slnx` files.
